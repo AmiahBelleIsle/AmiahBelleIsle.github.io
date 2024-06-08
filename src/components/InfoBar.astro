@@ -1,0 +1,219 @@
+<div class="main-container">
+    {/*Picture and Name*/}
+    <div class="profile-picture-container">
+        <img src="/profile-picture.png" alt="profile picture" />
+        <p>Amiah R. Belle Isle</p>
+    </div>
+    {/*Info Fields*/}
+    <div class="personal-info-container">
+        {/*Location*/}
+        <div class="info-entry">
+            <img src="/location-pointer.svg" alt="location" />
+            <p>Minnesota, United States</p>
+        </div>
+        {/*Email*/}
+        <a href="mailto:amiah.belleisle@gmail.com">
+            <div class="info-entry">
+                <img src="/email.svg" alt="email" />
+                <p>amiah.belleisle@gmail.com</p>
+            </div>
+        </a>
+        {/*Github Profile*/}
+        <a href="https://github.com/AmiahBelleIsle/">
+            <div class="info-entry">
+                <img src="/code-icon.svg" alt="phone" />
+                <p>GitHub Profile</p>
+            </div>
+        </a>
+    </div>
+    {/*End Info Fields*/}
+</div>
+
+<style>
+.main-container {
+    position: relative;
+    background: #052557;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    top: 0dvh;
+    height: 20vh;
+    height: 20svh;
+    border-bottom: 1vh solid #021431;
+}
+
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1vh;
+    margin: 1svh;
+    margin-left: 5vw;
+
+    align-items: center;
+    width: fit-content;
+}
+.profile-picture-container img {
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    height: 12.5vh;
+    height: 12.5svh;
+    width: 12.5vh;
+    width: 12.5svh;
+}
+.profile-picture-container p {
+    position: relative;
+    top: -0.7vh;
+    top: -0.7svh;
+    color: #f9d8d2;
+    font-size: clamp(0.2rem, 1.7vh, 1rem);
+    font-size: clamp(0.2rem, 1.7svh, 1rem);
+    font-family: DejaVu Sans Mono, monospace, system-ui;
+    text-wrap: balance;
+    text-align: center;
+}
+
+.personal-info-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1vh;
+    margin: 1svh;
+    margin-top: 0;
+    margin-left: 5vw;
+
+    padding-top: 1vh;
+    padding-top: 1svh;
+    padding-bottom: 1vh;
+    padding-bottom: 1svh;
+
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    height: 18vh;
+    height: 18svh;
+    overflow: scroll;
+}
+
+.personal-info-container .info-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-right: 2rem;
+
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+
+    border-radius: 1rem;
+    background-color: #5923c8;
+    transition: background-color 0.5s ease;
+}
+.personal-info-container .info-entry:hover {
+    background-color: #7f33cd;
+}
+.personal-info-container .info-entry img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+.personal-info-container .info-entry p {
+    color: #f9d8d2;
+    line-height: 0.3rem;
+}
+.personal-info-container a {
+    color: #f9d8d2;
+    text-decoration: none;
+}
+.personal-info-container a:hover {
+    text-decoration: underline;
+}
+
+/* Desktop styling */
+@media (min-width: 769px) {
+    .main-container {
+        position: fixed;
+        background: #052557;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        top: 0dvh;
+        height: 100vh;
+        width: 20vw;
+        border-right: 0.5vw solid #021431;
+    }
+    .profile-picture-container {
+        display: flex;
+        flex-direction: column;
+        
+        margin: 1vh;
+        margin: 1svh;
+        margin-left: 0;
+
+        align-items: center;
+        width: fit-content;
+    }
+    .profile-picture-container img {
+        border-radius: 50%;
+        border: 0.2rem solid black;
+        height: 20vh;
+        height: 20svh;
+        width: 20vh;
+        width: 20svh;
+    }
+    .profile-picture-container p {
+        position: relative;
+        top: -0.7vh;
+        top: -0.7svh;
+        font-size: clamp(0.2rem, 2.5vh, 2rem);
+        font-size: clamp(0.2rem, 2.5svh, 2rem);
+        font-family: DejaVu Sans Mono, monospace, system-ui;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .personal-info-container {
+        display: flex;
+        flex-direction: column;
+
+        margin: 1vh;
+        margin: 1svh;
+        margin-top: 0;
+
+        align-items: left;
+        justify-content: center;
+        width: 20vw;
+        height: fit-content;
+    }
+
+    .personal-info-container .info-entry {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    .personal-info-container .info-entry p {
+        line-height: 1.3rem;
+        font-size: clamp(0.2rem, 2.5vh, 2rem);
+        font-size: clamp(0.2rem, 1.7svh, 1rem);
+        text-wrap: balance;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+}
+
+</style>

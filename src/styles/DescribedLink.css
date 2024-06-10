@@ -1,0 +1,49 @@
+.described-link {
+    margin-top: 2%;
+    min-width: 80%;
+    max-width: 90%;
+    color: #f9d8d2;
+}
+.described-link .dl-title {
+    background: #052557;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-left: 5px solid #021431;
+    width: fit-content;
+    max-width: 74%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+}
+.described-link .dl-title a {
+    color: #d77eaf;
+    text-decoration: none;
+}
+.described-link .dl-title a:hover {
+    text-decoration: underline;
+}
+.described-link .dl-title a img {
+    display: inline;
+    vertical-align: bottom;
+    max-width: 1.5rem;
+    padding-left: 0.5rem;
+}
+.described-link .dl-title p {
+    margin: 0;
+    margin-top: 2%;
+    color: #ac59bd;
+    font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+}
+.described-link .dl-content {
+    background: #052557;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-left: 5px solid #021431;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+}

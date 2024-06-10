@@ -1,11 +1,81 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InfoBar from '../components/InfoBar.astro';
+import '../styles/DescribedLink.css';
 ---
 
 <Layout title="Amiah Belle Isle">
 	<InfoBar />
 	<main>
+		<div>
+			<h1>Professional Summary</h1>
+			<p>&emsp; I'm a computer science student eager to start my software engineering career. I am highly motivated and self driven. I pride myself in my ability to do high quality work, which has placed me on my school's dean's list for academic achievement.</p>
+		</div>
+		<div>
+			<h1>Skills</h1>
+			<ul>
+				<li>Java</li>
+				<li>Python</li>
+				<li>C++</li>
+				<li>Bash</li>
+				<li>GitHub</li>
+				<li>SQL</li>
+				<li>Familiar with Linux and Windows operating systems.</li>
+			</ul>
+		</div>
+		<div>
+			<h1>Education</h1>
+			<p>&emsp; Lakeland University, Wisconsin<br/>
+			   &emsp; <b>Major: </b>Computer Science<br/>
+			   &emsp; Expected to graduate 2025<br/></p>
+		</div>
+		<div>
+			<h1>Projects</h1>
+			
+			{/*Python Noise Gen*/}
+			<div class="described-link">
+				<div class="dl-title">
+			
+				<a href="https://github.com/AmiahBelleIsle/python_noise_generator">Noise Generator <img style="display: inline; padding-left: 0.2rem; vertical-align:sub" src="../link-simple-pink.svg" /></a>
+			
+				<p>Python</p>
+			
+				</div>
+				<div class="dl-content">
+				<p>A GUI application made with tkinter and PIL that allows the user to generate an image of noise and save it to their computer.</p>
+				</div>
+			</div>
+
+			{/*Bash ff apt*/}
+			<div class="described-link">
+				<div class="dl-title">
+			
+				<a href="https://github.com/AmiahBelleIsle/install-firefox-apt-removed-snap">Automated Firefox Install Script<img style="display: inline; padding-left: 0.4rem; vertical-align:sub" src="../link-simple-pink.svg" /></a>
+			
+				<p>Bash Script</p>
+			
+				</div>
+				<div class="dl-content">
+				<p>A bash script that automates the process of installing Firefox on Ubuntu using APT. Intended for use after removing snaps.</p>
+				</div>
+			</div>
+
+			{/*This website*/}
+			<div class="described-link">
+				<div class="dl-title">
+			
+				<a href="https://github.com/AmiahBelleIsle/AmiahBelleIsle.github.io">This Website<img style="display: inline; padding-left: 0.4rem; vertical-align:sub" src="../link-simple-pink.svg" /></a>
+			
+				<p>Astro</p>
+			
+				</div>
+				<div class="dl-content">
+				<p>Made with Astro, HTML, and CSS.</p>
+				</div>
+			</div>
+  
+		</div>
+
 	</main>
 </Layout>
 
@@ -13,48 +83,41 @@ import InfoBar from '../components/InfoBar.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
+		width: fit-content;
 		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
+		color: #f9d8d2;
+		font-size: large;
 		line-height: 1.6;
 	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+	ul {
+		list-style-type:disc;
+		display:flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	ul li {
+		margin-right: 2rem;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	h1::after {
+		content: "";
+		position:absolute;
+		display: block;
+		background: linear-gradient(90deg,#f9d8d2 66%,  #121738);
+		border-radius: 5%;
+		height: 5px;
+		width: calc(95% - 2rem);
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+	{/*Desktop Styling*/}
+	@media (min-width: 769px){
+		main {
+			margin: 0;
+			margin-left: 30.5vw;
+			margin-right: 10vw;
+			width: fit-content;
+		}
+		h1::after {
+			width: calc(55% - 2rem);
+		}
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+	
 </style>

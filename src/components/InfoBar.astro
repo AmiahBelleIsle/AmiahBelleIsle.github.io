@@ -1,3 +1,6 @@
+---
+import ResumeDownloads from "./ResumeDownloads.astro"
+---
 <div class="main-container">
     {/*Picture and Name*/}
     <div class="profile-picture-container">
@@ -27,7 +30,10 @@
         </a>
     </div>
     {/*End Info Fields*/}
+    {/*Downloads*/}
+    <ResumeDownloads />
 </div>
+
 
 <style>
 .main-container {
@@ -215,7 +221,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
 }
 
 </style>
